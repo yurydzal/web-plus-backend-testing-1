@@ -14,11 +14,12 @@ describe('PostsService', () => {
 
   it('should add a new post', () => {
     const testPost = postsService.create(post);
+    console.log(testPost);
 
     expect(testPost).toBeDefined();
-    expect(testPost.id).not.toBeNull();
-    expect(testPost.date).not.toBeNull();
-    expect(testPost.text).not.toBeNull();
+    expect(testPost.id).toBe('2');
+    expect(testPost.date).toBeDefined();
+    expect(testPost.text).toBe(post.text);
   });
 
   it('should find a post', () => {
